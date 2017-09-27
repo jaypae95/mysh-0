@@ -1,16 +1,30 @@
 #include "utils.h"
-
+#include <string.h>
+#include <stdlib.h>
+#include <stio.h>
 void mysh_parse_command(const char* command,
                         int *argc, char*** argv)
 {
-  char *arr[];
-  int i = 0;
-  int j = 0;
-  while(*command != null) {
-    if(command[i] = " ") {
-      for (int k=0; k<i; k++) {
-        arr[j][k] = command[k]
-      }
-    j++;
+  int current = 0;
+  int k = 0;
+  char *token = NULL;
+  char _command[8096] = {'\0', };
+
+  while(command[current] != NULL) {
+  _command[current] = command[current];
+  current++;
   }
-}
+
+  token = strtok(_command, " ");
+  *argc = 0;
+  char **_argv = (char**)malloc(4*100);
+
+  while (token != NULL) {
+  _argv[*argc] = token;
+  (*argc)++;
+  token = strtok(NULL, " ");
+  }
+
+  argv = *_argv;
+
+  }
