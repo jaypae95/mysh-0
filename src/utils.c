@@ -34,7 +34,7 @@ void mysh_parse_command(const char* command, int *argc, char *** argv)
  }
 
  for (int i = 0; i < *argc; i++) {
-   strcpy(arv[0][i], _argv[i]);
+   strcpy(argv[0][i], _argv[i]);
  }
 
 }
