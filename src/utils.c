@@ -3,7 +3,7 @@
 #include "stdlib.h"
 #include "string.h"
 
-void mysh_parse_command(cont char* command, int *argc, char *** argv)
+void mysh_parse_command(const char* command, int *argc, char *** argv)
 {
  int current = 0;
  int k = 0;
