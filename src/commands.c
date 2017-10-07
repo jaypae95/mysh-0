@@ -1,5 +1,5 @@
 #include <string.h>
-
+#include <unistd.h>
 #include "commands.h"
 
 int do_cd(int argc, char** argv) {
@@ -14,8 +14,9 @@ int do_pwd(int argc, char** argv) {
   if (!validate_pwd_argv(argc, argv))
     return -1;
 
-  // TODO: Fill it!
-
+  char dirname[200];
+  getcwd(dirname,200);
+  printf("%s", dirname);
   return 0;
 }
 
