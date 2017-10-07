@@ -25,7 +25,7 @@ void mysh_parse_command(const char* command, int *argc, char *** argv)
  char **_argv = (char**)malloc(sizeof(char)*30);
  if (token == NULL) {
  *argc = 1;
- *argv = (char*)malloc(sizeof(char)*30);
+ *argv = (char**)malloc(sizeof(char)*30);
  argv[0][0] = (char*)malloc(sizeof(char));
  strcpy(argv[0][0],"");
  return;
@@ -41,9 +41,7 @@ void mysh_parse_command(const char* command, int *argc, char *** argv)
  
  for (int i = 0; i < *argc; i++) {
   argv[0][i] = (char*)malloc(sizeof(char)*30);
- } 
- for (int i = 0; i < *argc; i++) {
-   strcpy(argv[0][i], _argv[i]); 
+  strcpy(argv[0][i], _argv[i]); 
  }
 
 }
