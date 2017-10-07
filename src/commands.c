@@ -16,7 +16,7 @@ int do_pwd(int argc, char** argv) {
     return -1;
   char *dirname;
   dirname =  getcwd(NULL,200);
-  printf("%s", dirname);
+  printf("%s\n", dirname);
   free(dirname);
   return 0;
 }
