@@ -12,7 +12,6 @@ void mysh_parse_command(const char* command, int *argc, char *** argv)
 
  while(command[current] != NULL) {
    _command[current] = command[current];
-   printf("%c", _command[current]);
    current++;
  }
 
@@ -38,3 +37,4 @@ void mysh_parse_command(const char* command, int *argc, char *** argv)
  }
 
 }
+
