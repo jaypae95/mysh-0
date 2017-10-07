@@ -15,6 +15,7 @@ void mysh_parse_command(const char* command, int *argc, char *** argv)
    current++;
  }
 
+ _command[strlen(_command)-1] = '\0';
  token = strtok(_command, " ");
 
  *argc = 0;
